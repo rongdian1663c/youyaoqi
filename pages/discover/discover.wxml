@@ -1,8 +1,36 @@
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key='index'>
-    <swiper-item>
-      <image src="{{item.cover}}" class="slide-image" />
-    </swiper-item>
-  </block>
+  <swiper-item wx:for="{{imgUrls}}" wx:key='index'>
+    <image src="{{item.cover}}" class="slide-image" />
+  </swiper-item>
 </swiper>
 
+
+<view wx:for="{{imgComics}}" wx:key='index'>
+  <!-- 订阅,更新等-->
+  <view wx:if="{{item.comicType == 11}}">
+    <view wx:for="{{item.comics}}" wx:key='index'>
+      <image src="{{item.cover}}" class="menu-image" />
+    </view>
+  </view>
+
+  <!-- 漫画分类模块-->
+  <view wx:if="{{item.comicType != 11 && item.itemTitle == '超人气作品'}}">
+    <text class='text-title'>{{item.itemTitle}}</text>
+    <view wx:for="{{item.comics}}" wx:key='index'>
+      <view class='cell'>
+        <image class='cell-image' src="{{item.cover}}" />
+        <text class='text-name'>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{item.comicType != 11 && item.itemTitle!='超人气作品'}}">
+    <text class='text-title'>{{item.itemTitle}}</text>
+    <view wx:for="{{item.comics}}" wx:key='index'>
+      <view class='cell-Other'>
+        <image class='cell-image' src="{{item.cover}}" />
+        <text class='text-name'>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
