@@ -1,2 +1,31 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view>
+  <!-- 顶层绿色模块-->
+  <view class='top'>
+    <!-- 点击事件未完成的登录头像图片-->
+    <image src='/image/user_default_header.png' class='img-login'></image>
+
+    <view class='text-layout'>
+      <view class='text-layout'>
+        <text class='text-loginA'>主人, 戳我登录</text>
+        <text class='text-loginB'>小主  还木有登录呢 ~</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='middle-view'>
+    <view class='layout-lr'>
+      <text >未开通</text>
+      <text class='text-describe'>我的VIP</text>
+    </view>
+    <view class='layout-c'>
+      丨
+    </view>
+    <view class='layout-lr'>
+      <text >余额0</text>
+      <text class='text-describe'>我的妖气币</text>
+    </view>
+    
+  </view>
+</view>

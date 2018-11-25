@@ -13,18 +13,41 @@
     </view>
   </view>
 
-  <!-- 漫画分类模块-->
+  <!-- 漫画分类模块(超人气作品模块)-->
   <view wx:if="{{item.comicType != 11 && item.itemTitle == '超人气作品'}}">
     <text class='text-title'>{{item.itemTitle}}</text>
-    <view wx:for="{{item.comics}}" wx:key='index'>
-      <view class='cell'>
+    <view wx:for="{{item.comics}}" wx:key='index' wx:for-index="aindex">
+      <view class='cell' wx:if="{{aindex <= 3}}">
         <image class='cell-image' src="{{item.cover}}" />
         <text class='text-name'>{{item.name}}</text>
+        <text class='text-intro'>{{item.short_description}}</text>
       </view>
     </view>
+    <button class='button-a'> 查看更多 ></button>
+    <button class='button-b'> 换一换 の</button>
   </view>
 
-  <view wx:if="{{item.comicType != 11 && item.itemTitle!='超人气作品'}}">
+  <!-- 漫画分类模块(其他分类模块)-->
+  <view wx:if="{{item.comicType != 11 && item.itemTitle!='超人气作品' && item.itemTitle!='漫改作品'}}">
+    <!-- 分类标题-->
+    <text class='text-title'>{{item.itemTitle}}</text>
+    <!-- 遍历漫画集合-->
+    <view wx:for="{{item.comics}}" wx:key='index'>
+      <view class='cell-Other' >
+        <!-- 拿到具体漫画-->
+        <image class='cell-image' src="{{item.cover}}" />
+        <!-- 漫画名-->
+        <text class='text-name'>{{item.name}}</text>
+        <!--漫画介绍 -->
+        <text class='text-intro'>{{item.short_description}}</text>
+      </view>
+    </view>
+    <button class='button-a'> 查看更多 ></button>
+    <button class='button-b'> 换一换 の</button>
+  </view>
+
+  <!-- 漫画分类模块(底部分类模块)-->
+  <view wx:if="{{item.comicType != 11 && item.itemTitle=='漫改作品'}}">
     <text class='text-title'>{{item.itemTitle}}</text>
     <view wx:for="{{item.comics}}" wx:key='index'>
       <view class='cell-Other'>
@@ -32,5 +55,7 @@
         <text class='text-name'>{{item.name}}</text>
       </view>
     </view>
+    <button class='button-c'> 查看更多 ></button>
+   
   </view>
 </view>

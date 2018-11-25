@@ -1,2 +1,13 @@
-<!--pages/update/update.wxml-->
-<text>pages/update/update.wxml</text>
+<view>
+
+  <view catchtap="changePage" class="tabbar" >
+    <view class="tabbar-item {{current==0?'active':''}}" data-current="0">周日</view>
+    <view class="tabbar-item {{current==1?'active':''}}" data-current="1">周一</view>
+    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">周二</view>
+    <view class="tabbar-item {{current==0?'active':''}}" data-current="0">周三</view>
+    <view class="tabbar-item {{current==1?'active':''}}" data-current="1">周四</view>
+    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">昨日</view>
+    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">今日</view>
+  </view>
+
+</view>

@@ -1,9 +1,11 @@
 {
   "pages": [
+    
+    "pages/my/my",
     "pages/discover/discover",
     "pages/update/update",
     "pages/bookrack/bookrack",
-    "pages/my/my",
+   
     "pages/index/index",
     "pages/logs/logs"
   ],
