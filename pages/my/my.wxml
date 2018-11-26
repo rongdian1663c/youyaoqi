@@ -13,19 +13,66 @@
     </view>
 
   </view>
-
   <view class='middle-view'>
     <view class='layout-lr'>
-      <text >未开通</text>
+      <text>未开通</text>
       <text class='text-describe'>我的VIP</text>
     </view>
     <view class='layout-c'>
       丨
     </view>
     <view class='layout-lr'>
-      <text >余额0</text>
+      <text>余额0</text>
       <text class='text-describe'>我的妖气币</text>
     </view>
-    
   </view>
+
+  <view class='layout-bottom-chief'>
+  
+  <view class='layout-bottom'>
+    <view class='icon '>
+      <image src='/image/icon_mine_sign.png'></image>
+      <text>签到</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_wallet.png'></image>
+      <text>钱包</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_subscribe.png'></image>
+      <text>订阅</text>
+    </view>
+  </view>
+  
+  <view class='layout-bottom'>
+    <view class='icon '>
+      <image src='/image/icon_mine_seal.png'></image>
+      <text>封印图</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_skin.png'></image>
+      <text>皮肤</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_help.png'></image>
+      <text>帮助反馈</text>
+    </view>
+  </view>
+
+  <view class='layout-bottom'>
+    <view class='icon '>
+      <image src='/image/icon_mine_police.png' ></image>
+      <text>首都网警</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_author.png'></image>
+      <text>作者中心</text>
+    </view>
+    <view class='icon '>
+      <image src='/image/icon_mine_setting.png'></image>
+      <text>设置</text>
+    </view>
+  </view>
+  </view>
+
 </view>

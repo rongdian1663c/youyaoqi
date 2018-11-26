@@ -1,7 +1,7 @@
 /* pages/my/my.wxss */
 
 .top {
-  background-color: #4ef1adda;
+  background-color: #00ffbb;
   height: 350rpx;
   display: flex;
 }
@@ -76,19 +76,50 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* 垂直居中 */
-  justify-content: center;/* 水平居中 */
- 
+  justify-content: center; /* 水平居中 */
 }
 
 .layout-c {
   display: flex;
   align-items: center;
   color: #c9c4c4;
-  
 }
 
 .text-describe {
   color: #c9c4c4;
   font-size: 25rpx;
   margin-top: 10rpx;
+}
+
+.layout-bottom-chief {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140rpx;
+}
+
+.icon {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  margin-left: 16%;
+}
+
+.icon image {
+  height: 85rpx;
+  width: 85rpx; 
+  margin-top: 30%;
+}
+
+
+.layout-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.icon text{
+  font-size: 25rpx;
 }
