@@ -1,5 +1,5 @@
-.swiper {
-  height: 400rpx;
+swiper {
+  height: 450rpx;
   width: 100%;
 }
 
@@ -23,13 +23,11 @@
 .text {
   text-align: center;
   width: 100%;
-
 }
 
 .menu-image {
-  width: 150rpx;
+  width: 20%;
   height: 120rpx;
-  display: block;
   float: left;
 }
 
