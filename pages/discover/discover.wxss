@@ -75,7 +75,7 @@
   flex-direction: column;
   width: calc(30%);
   float: left;
-  height: 300rpx;
+  height: 400rpx;
   margin:7.5rpx;
 }
 
