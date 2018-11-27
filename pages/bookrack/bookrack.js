@@ -6,7 +6,7 @@ Page({
     scrollLeft: 0, //tab标题的滚动条位置
     expertList: [{ //假数据
       img: "avatar.png",
-      name: "欢顔",
+      name: "特别厉害",
       tag: "知名情感博主",
       answer: 134,
       listen: 2234
