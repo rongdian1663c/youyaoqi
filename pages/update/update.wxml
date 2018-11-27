@@ -17,7 +17,7 @@
   </swiper>  -->
 
 
-
+ 
 <view wx:for="{{imgUrls}}" wx:key='index' class='cartoon-layout'>
     <view class='cartoon-detail'>
     <!-- 漫画图片 -->
