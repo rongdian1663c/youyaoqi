@@ -4,7 +4,6 @@
   </swiper-item>
 </swiper>
 
-
 <view wx:for="{{imgComics}}" wx:key='index'>
   <!-- 订阅,更新等-->
   <view wx:if="{{item.comicType == 11}}">
@@ -17,7 +16,7 @@
   <view wx:if="{{item.comicType != 11 && item.itemTitle == '超人气作品'}}">
     <text class='text-title'>{{item.itemTitle}}</text>
     <view wx:for="{{item.comics}}" wx:key='index' wx:for-index="aindex">
-      <view class='cell' wx:if="{{aindex <= 3}}">
+      <view class='cell' wx:if="{{aindex <= 3}}"  bindtap="click" data-comic="{{item}}">
         <image class='cell-image' src="{{item.cover}}" />
         <text class='text-name'>{{item.name}}</text>
         <text class='text-intro'>{{item.short_description}}</text>
@@ -33,14 +32,28 @@
     <text class='text-title'>{{item.itemTitle}}</text>
     <!-- 遍历漫画集合-->
     <view wx:for="{{item.comics}}" wx:key='index'>
-      <view class='cell-Other' >
-        <!-- 拿到具体漫画-->
-        <image class='cell-image' src="{{item.cover}}" />
-        <!-- 漫画名-->
-        <text class='text-name'>{{item.name}}</text>
-        <!--漫画介绍 -->
-        <text class='text-intro'>{{item.short_description}}</text>
+
+      <!-- 大图 -->
+      <view wx:if="{{item.ubig}}">
+        <view class='cell-Other-big'>
+          <!-- 拿到具体漫画-->
+          <image class='cell-image-big' src="{{item.cover}}" />
+          <!-- 漫画名-->
+          <text class='text-name'>{{item.name}}</text>
+        </view>
       </view>
+      <!-- 小图 -->
+      <view wx:else>
+        <view class='cell-Other'>
+          <!-- 拿到具体漫画-->
+          <image class='cell-image' src="{{item.cover}}" />
+          <!-- 漫画名-->
+          <text class='text-name'>{{item.name}}</text>
+          <!--漫画介绍 -->
+          <text class='text-intro'>{{item.short_description}}</text>
+        </view>
+      </view>
+
     </view>
     <button class='button-a'> 查看更多 ></button>
     <button class='button-b'> 换一换 の</button>
@@ -56,6 +69,6 @@
       </view>
     </view>
     <button class='button-c'> 查看更多 ></button>
-   
+
   </view>
 </view>

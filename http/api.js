@@ -5,6 +5,9 @@ export default {
     "url": '/v3/appV3_3/ios/phone/comic/getDetectList'
   }),
   getDetectUpdataList: (day=1) => http.get({
-    "url": '/v3/appV3_3/ios/phone/list/todayRecommendList?&page=0&day='+ (day+1)
+    "url": '/v3/appV3_3/ios/phone/list/todayRecommendList?page=0&day='+ (day+1)
   }),
+  getChapterList: () => http.get({
+    "url": '/v3/appV3_3/ios/phone/comic/detail_realtime?version=4.3.12&comicid=' + 172620
+  })
 }

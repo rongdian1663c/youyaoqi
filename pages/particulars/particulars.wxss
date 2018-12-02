@@ -1,0 +1,9 @@
+.integrated-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-image image {
+  width: 100%;
+  filter:blur(2px);
+}

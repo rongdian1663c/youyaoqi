@@ -1,11 +1,14 @@
 {
   "pages": [
+    
     "pages/discover/discover",
+    "pages/particulars/particulars",
     "pages/update/update",
     "pages/bookrack/bookrack",
     "pages/my/my",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

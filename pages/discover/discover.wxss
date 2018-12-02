@@ -1,12 +1,8 @@
-.swiper {
+swiper {
   height: 400rpx;
   width: 100%;
 }
 
-.swiper-image {
-  height: 100%;
-  width: 100%;
-}
 
 .slide-image {
   height: 100%;
@@ -23,12 +19,11 @@
 .text {
   text-align: center;
   width: 100%;
-
 }
 
 .menu-image {
   width: 150rpx;
-  height: 120rpx;
+  height: 150rpx;
   display: block;
   float: left;
 }
@@ -43,7 +38,7 @@
   font-weight: bold;
 }
 
-.text-name{
+.text-name {
   width: 100%;
   height: 100rpx;
   font-size: 25rpx;
@@ -67,16 +62,30 @@
   width: calc(48%);
   float: left;
   height: 300rpx;
-  margin:7.5rpx;
+  margin: 7.5rpx;
+}
+
+.cell-Other-big {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  height: 500rpx;
+  margin: 7.65rpx;
 }
 
 .cell-Other {
-   display: flex;
+  display: flex;
   flex-direction: column;
   width: calc(31.5%);
   float: left;
   height: 450rpx;
-  margin:7.65rpx;
+  margin: 7.5rpx;
+}
+
+.cell-image-big {
+  width: 100%;
+  border-radius: 10rpx;
   
 }
 
@@ -92,15 +101,13 @@
   font-size: 20rpx;
   margin-left: 10rpx;
   margin-bottom: 30rpx;
-
 }
 
 .button-b {
   width: 48%;
   height: 50rpx;
   font-size: 20rpx;
-  margin: 0rpx,10rpx,30rpx,0rpx;
-  
+  margin: 0rpx, 10rpx, 30rpx, 0rpx;
 }
 
 .button-c {
@@ -110,4 +117,3 @@
   margin-bottom: 20rpx;
   margin-top: 10rpx;
 }
-

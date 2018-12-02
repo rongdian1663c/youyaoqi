@@ -1,5 +1,6 @@
 <view>
   <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <!-- bindtap设置点击事件,data-***来传具体的值 -->
     <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">周一</view>
     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">周二</view>
     <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">周三</view>
