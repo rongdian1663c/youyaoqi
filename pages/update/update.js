@@ -12,21 +12,20 @@ Page({
   switchTab: function (e) {
     this.setData({
       currentTab: e.detail.current
+
     });
     this.checkCor();
+    api.getDetectUpdataList(this.data.currentTab)
+      .then((res) => {
+        this.setData({
+          imgUrls: res.comics,
+
+        })
+      })
+      .catch()
+  
   },
 
-  // onLoad: function () {
-  //   api.getDetectList()
-  //     .then((res) => {
-  //       this.setData({
-  //         imgUrls: res.galleryItems,
-  //         imgComics: res.comicLists
-  //       })
-  //     })
-  //     .catch()
-  // }
-  // 点击标题切换当前页时改变样式
   swichNav: function (e) {
     var cur = e.target.dataset.current;
     if (this.data.currentTaB == cur) {
@@ -51,6 +50,20 @@ Page({
   },
   
   onLoad: function () {
+    var that = this;
+    //  高度自适应
+    wx.getSystemInfo({
+      success: function (res) {
+        var clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR = 750 / clientWidth;
+        var calc = clientHeight * rpxR;
+        console.log(calc)
+        that.setData({
+          winHeight: calc
+        });
+      }
+    });
     api.getDetectUpdataList()
       .then((res) => {
         this.setData({

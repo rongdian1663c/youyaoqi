@@ -19,7 +19,7 @@
 }
 
 .tab-item.active {
-  color: #00ffbb;
+  color: #0fb;
   position: relative;
 }
 
@@ -28,7 +28,7 @@
   display: block;
   height: 8rpx;
   width: 65rpx;
-  background: #00ffbb;
+  background: #0fb;
   position: absolute;
   bottom: 0;
   left: 1rpx;
@@ -36,16 +36,18 @@
 }
 
 .cartoon-layou {
-display: flex;
-flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
 .cartoon-detail {
-display: flex;
-flex-direction: column;
-margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
 
+.scoll-h {
+  height: 100%;
 }
 
 .image-cartoon {
@@ -55,45 +57,42 @@ margin-top: 30px;
 }
 
 .text-layout {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .text-title {
-  font-weight :500rpx;
+  font-weight: 500rpx;
   margin-top: 3%;
   margin-left: 20rpx;
 }
 
 .text-category {
-  background-color: #FDD63E;
+  background-color: #fdd63e;
   width: 11%;
   margin-left: 20rpx;
   border-radius: 20rpx;
   margin-top: 3%;
- 
 }
 
-.text-category text{
+.text-category text {
   color: white;
   font-size: 30rpx;
-  margin-left:13%;
-
+  margin-left: 13%;
 }
 
 .text-author {
   font-size: 28rpx;
-   margin-top: 3%;
-   margin-left: auto;
+  margin-top: 3%;
+  margin-left: auto;
   margin-right: 20rpx;
-  color:rgb(148, 153, 153);
-  
+  color: rgb(148, 153, 153);
 }
 
 .text-description {
-  margin-top:3%;
-  margin-left:20rpx;
+  margin-top: 3%;
+  margin-left: 20rpx;
   font-size: 28rpx;
-  color:rgb(148, 153, 153);
+  color: rgb(148, 153, 153);
   margin-right: 10rpx;
 }

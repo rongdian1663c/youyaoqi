@@ -73,10 +73,11 @@
 .cell-Other {
    display: flex;
   flex-direction: column;
-  width: calc(30%);
+  width: calc(31.5%);
   float: left;
-  height: 300rpx;
-  margin:7.5rpx;
+  height: 450rpx;
+  margin:7.65rpx;
+  
 }
 
 .cell-image {
