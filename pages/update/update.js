@@ -9,7 +9,7 @@ Page({
     imgUrls: [],
     tabs: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
     page: 1,
-    isLoadingComplete: true,
+    isLoadingComplete: false,
     isLoading: false
   },
 
@@ -18,7 +18,7 @@ Page({
     this.setData({
       currentTab: e.detail.current,
       page: 1,
-      isLoadingComplete: true,
+      isLoadingComplete: false,
       isLoading: false
     });
     this.checkCor();
@@ -64,10 +64,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-    if (this.data.isLoadingComplete) {
-      this.setData({
-        isLoadingComplete: false
-      })
+    if (!this.data.isLoadingComplete && !this.data.isLoading) {
       this.data.page++;
       this.setData({
         isLoading: true,
@@ -95,6 +92,7 @@ Page({
         }
         this.setData({
           imgUrls: imgUrls,
+          isLoading: false,
         })
       })
   }

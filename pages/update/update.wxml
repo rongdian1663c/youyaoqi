@@ -32,8 +32,8 @@
         </view>
 
          <view hidden="{{!isLoading}}">
-            <view class="loading" hidden="{{!isLoadingComplete}}">正在加载...</view>
-            <view class="loading-complete" hidden="{{isLoadingComplete}}">已加载全部</view>
+            <view class="loading" hidden="{{isLoadingComplete}}">正在加载...</view>
+            <view class="loading-complete" hidden="{{!isLoadingComplete}}">已加载全部</view>
           </view>
       </scroll-view>
     </swiper-item>
