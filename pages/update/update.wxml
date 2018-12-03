@@ -1,13 +1,48 @@
 <view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <!-- bindtap设置点击事件,data-***来传具体的值 -->
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">周一</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">周二</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">周三</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">周四</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">周五</view>
+    <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">周六</view>
+    <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">周日</view>
+  </scroll-view>
+  
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3,4,5,6]}}">
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:for="{{imgUrls}}" wx:key='index' class='cartoon-layout'>
+          <view class='cartoon-detail'>
+            <!-- 漫画图片 -->
+            <image src='{{item.cover}}' class='image-cartoon'></image>
+            <view class='text-layout'>
+              <!-- 漫画标题 -->
+              <text class='text-title'>{{item.title}}</text>
+              <!-- 漫画类别 -->
+              <view wx:for="{{item.tagList}}" wx:key='index' class='text-category'>
+                <text>{{item.tagStr}}</text>
+              </view>
+              <!-- 漫画作者 -->
+              <text class='text-author'>{{item.author}}</text>
+            </view>
 
-  <view catchtap="changePage" class="tabbar" >
-    <view class="tabbar-item {{current==0?'active':''}}" data-current="0">周日</view>
-    <view class="tabbar-item {{current==1?'active':''}}" data-current="1">周一</view>
-    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">周二</view>
-    <view class="tabbar-item {{current==0?'active':''}}" data-current="0">周三</view>
-    <view class="tabbar-item {{current==1?'active':''}}" data-current="1">周四</view>
-    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">昨日</view>
-    <view class="tabbar-item {{current==2?'active':''}}" data-current="2">今日</view>
-  </view>
+            <view class='text-layout'>
+              <!-- 漫画最新章节及描述 -->
+              <text class='text-description'>{{item.description}}</text>
+              <text class='text-author'>全集  ></text>
+            </view>
+
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+
+
+
+
 
 </view>

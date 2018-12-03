@@ -1,0 +1,8 @@
+<view class='integrated-layout'>
+  <!-- 顶层大图 -->
+  <view class='top-image'>
+    <image src='{{comicObj.cover}}'></image>
+  </view>
+
+  
+</view>
