@@ -4,7 +4,7 @@ export default {
   getDetectList: () => http.get({
     "url": '/v3/appV3_3/ios/phone/comic/getDetectList'
   }),
-  getDetectUpdataList: (day=1) => http.get({
+  getDetectUpdataList: (day=0) => http.get({
     "url": '/v3/appV3_3/ios/phone/list/todayRecommendList?page=0&day='+ (day+1),
     "showLoading":false
   }),

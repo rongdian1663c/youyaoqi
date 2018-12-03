@@ -4,13 +4,18 @@
   box-sizing: border-box;
   overflow: hidden;
   line-height: 80rpx;
-  background: #f7f7f7;
+  background: #fff;
+  box-shadow: 1rpx 5rpx 5rpx #f5f1f1;
   font-size: 13px;
   white-space: nowrap;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.tab-content {
+  margin-top: 80rpx;
 }
 
 .tab-item {
@@ -48,7 +53,7 @@
 .cartoon-detail {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-bottom: 10rpx;
 }
 
 .scoll-h {
@@ -56,48 +61,46 @@
 }
 
 .image-cartoon {
-  width: 95%;
-  border-radius: 10rpx;
-  margin-left: 2.5%;
+  width: 100%;
+  height: 430rpx;
 }
 
 .text-layout {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding:10rpx 20rpx 3rpx 20rpx;
 }
 
 .text-title {
   font-weight: 500rpx;
-  margin-top: 3%;
-  margin-left: 20rpx;
+  font-size: 26rpx;
 }
 
 .text-category {
-  background-color: #fdd63e;
-  width: 11%;
-  margin-left: 20rpx;
-  border-radius: 20rpx;
-  margin-top: 3%;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .text-category text {
+  background-color: red;
   color: white;
-  font-size: 30rpx;
-  margin-left: 13%;
+  font-size: 17rpx;
+  margin-left: 15rpx;
+  border-radius: 20rpx;
+  padding: 3.5rpx 10rpx;
 }
 
 .text-author {
-  font-size: 28rpx;
-  margin-top: 3%;
+  font-size: 22rpx;
   margin-left: auto;
-  margin-right: 20rpx;
   color: rgb(148, 153, 153);
 }
 
 .text-description {
-  margin-top: 3%;
-  margin-left: 20rpx;
-  font-size: 28rpx;
+  font-size: 22rpx;
   color: rgb(148, 153, 153);
   margin-right: 10rpx;
 }
