@@ -90,6 +90,9 @@ Page({
         } else {
           imgUrls = res.comics
         }
+        imgUrls.map((res)=>{
+          res.cover = res.cover.replace("webp", "jpg")  //webp图片在ios不展示
+        })
         this.setData({
           imgUrls: imgUrls,
           isLoading: false,

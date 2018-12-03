@@ -8,7 +8,7 @@
   </view>
 
   <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-    <swiper-item wx:for="{{tabs}}">
+    <swiper-item wx:for="{{tabs}}" wx:key>
       <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="onReachBottom">
         <view wx:for="{{imgUrls}}" wx:key='index' class='cartoon-detail'>
           <!-- 漫画图片 -->
