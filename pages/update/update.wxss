@@ -4,8 +4,8 @@
   box-sizing: border-box;
   overflow: hidden;
   line-height: 80rpx;
-  background: white;
-  font-size: 10px;
+  background: #f7f7f7;
+  font-size: 13px;
   white-space: nowrap;
   position: fixed;
   top: 0;
@@ -14,24 +14,29 @@
 }
 
 .tab-item {
-  margin: 0 36rpx;
+  width: calc(14%);
   display: inline-block;
+  text-align: center;
 }
 
 .tab-item.active {
   color: #0fb;
   position: relative;
+  text-align: center;
 }
 
 .tab-item.active:after {
   content: "";
   display: block;
-  height: 8rpx;
-  width: 65rpx;
+  height: 5rpx;
+  width: 45rpx;
   background: #0fb;
   position: absolute;
+  text-align: center;
   bottom: 0;
-  left: 1rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
   border-radius: 16rpx;
 }
 
