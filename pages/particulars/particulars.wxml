@@ -4,7 +4,30 @@
     <image src='{{comicObj.cover}}'></image>
   </view>
 
-  <view>
-    
+  <view class='middle-layout'>
+    <view class='lucency'>
+      <image src='{{comicList.ori}}' class='image-cover'></image>
+      <view class='text-layout'>
+        <view class='Cartoon-name'>
+          {{comicList.name}}
+        </view>
+        <view class='author-name'>
+          {{comicList.author.name}}
+        </view>
+        <view class='hot'>
+          热度值({{comicDetaiList.click_total}})
+        </view>
+
+        <view class='comic-classify'>
+          <view wx:for="{{comicList.classifyTags}}" wx:key='index'>
+            <text class='comic-classify-specific'>{{item.name}}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+    <view class='opacity'>
+
+    </view>
   </view>
 </view>

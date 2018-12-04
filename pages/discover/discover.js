@@ -43,6 +43,7 @@ Page({
           imgUrls: res.galleryItems,
           imgComics: res.comicLists
         })
+        
       })
       .catch()
   }

@@ -3,7 +3,82 @@
   flex-direction: column;
 }
 
-.top-image image {
+.top-image image{
   width: 100%;
-  filter:blur(2px);
+  filter:contrast(40%);
 }
+
+.opacity {
+display: flex;
+border-radius: 10rpx;
+}
+
+.lucency {
+  position: absolute;
+  top: 150rpx;
+  
+  width: 100%;
+  display: flex;
+}
+
+.text-layout {
+  flex-direction: column;
+  margin-left: 3%;
+  display: flex;
+}
+
+.Cartoon-name {
+  font-size: 47rpx;
+  color: white;
+  
+}
+
+.author-name {
+  font-size: 32rpx;
+  color: white;
+  margin-top: 150rpx;
+}
+
+.hot {
+  font-size: 32rpx;
+  color: white;
+  margin-top: 12rpx;
+}
+
+.image-cover {
+  height: 430rpx;
+  width: 300rpx;
+  border-radius: 10rpx;
+  margin-left: 5%;
+  border: 5rpx solid white;
+  
+}
+
+.comic-classify {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+}
+
+.comic-classify-specific {
+  
+  margin-right: 20rpx;
+  color: rgb(35, 177, 243);
+  background-color: rgba(35, 177, 243, 0.144);
+  font-size:32rpx;
+  border-radius:30rpx;
+  padding:3.5rpx 15rpx;
+}
+
+.view-border{
+  background: red;
+  height: 100rpx;
+  width: 100%;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+
+
+
+

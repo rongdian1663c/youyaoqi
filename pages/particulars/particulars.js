@@ -4,17 +4,42 @@ import api from "../../http/api.js"
 Page({
   data: {
     comicObj: null,
+    comicList: [],
+    comicDetaiList: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  // onLoad: function (options) {
+  //   this.setData({
+  //     comicObj: JSON.parse(options.comic)
+  //   })
+  // },
   onLoad: function (options) {
     this.setData({
       comicObj: JSON.parse(options.comic)
+      
     })
+    api.getComicList(this.data.comicObj.comicId)
+      .then((res) => {
+        this.setData({
+          comicList: res.comic,
+
+        })
+      }),
+      api.getComicDetailsList(this.data.comicObj.comicId)
+        .then((res) => {
+          this.setData({
+            comicDetaiList: res.comic,
+
+          })
+        })
+
+      
   },
-  
+
+
 
 
 
