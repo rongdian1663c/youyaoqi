@@ -1,36 +1,41 @@
-.integrated-layout {
-  display: flex;
-  flex-direction: column;
-}
-
-.top-image image{
+.top-image {
   width: 100%;
-  filter:contrast(40%);
+  filter: contrast(40%);
 }
 
 .opacity {
-display: flex;
-border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  border: 5rpx solid red;
+  height: 100%;
+}
+
+.middle-layout {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 150rpx;
+  width: 100%;
 }
 
 .lucency {
-  position: absolute;
-  top: 150rpx;
-  
   width: 100%;
   display: flex;
+  border: 5rpx solid black;
 }
 
 .text-layout {
   flex-direction: column;
   margin-left: 3%;
   display: flex;
+  width: 100%;
+  
 }
 
 .Cartoon-name {
   font-size: 47rpx;
   color: white;
-  
 }
 
 .author-name {
@@ -47,38 +52,118 @@ border-radius: 10rpx;
 
 .image-cover {
   height: 430rpx;
-  width: 300rpx;
+  width: 600rpx;
   border-radius: 10rpx;
   margin-left: 5%;
   border: 5rpx solid white;
-  
 }
 
 .comic-classify {
   display: flex;
   flex-direction: row;
   margin-top: 50rpx;
+  width: 100%;
+  
 }
 
 .comic-classify-specific {
-  
   margin-right: 20rpx;
   color: rgb(35, 177, 243);
   background-color: rgba(35, 177, 243, 0.144);
-  font-size:32rpx;
-  border-radius:30rpx;
-  padding:3.5rpx 15rpx;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+  padding: 3.5rpx 15rpx;
 }
 
-.view-border{
+/* .view-border {
   background: red;
   height: 100rpx;
   width: 100%;
   border-top-left-radius: 30rpx;
   border-top-right-radius: 30rpx;
+} */
+
+.collect {
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  width: 100%;
+  border: 5rpx solid blue;
+  margin-top: 35rpx;
 }
 
+.collect image {
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 5%;
+}
 
+.collect-text {
+  font-size: 35rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  margin-right: auto;
+}
 
+.read {
+  height: 80%;
+  color: white;
+  font-size: 30rpx;
+  background-color: #20db84c5;
+  border-top-left-radius:50rpx;
+  border-bottom-left-radius:50rpx;
+  padding: 12rpx 110rpx 0 120rpx;
+  margin: auto 0 ;
+}
 
+.description {
+  margin-top: 35rpx;
+  font-size: 30rpx;
+  color: gray;
+  border: 5rpx solid yellow;
+}
 
+.catalog {
+  border: 5rpx solid green;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.catalog-specific {
+  display: flex;
+  flex-direction: row;
+}
+
+.catalog-specific image {
+  margin: 10rpx 20rpx 10rpx 30rpx;
+  height: 150rpx;
+  width:  33%;
+  border-radius: 10rpx;
+}
+
+.dirname {
+  border: 5rpx solid pink;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin : 40rpx 0rpx 0rpx 30rpx;
+}
+
+.dirname-text {
+  font-size: 32rpx;
+  font-weight:700;
+}
+
+.next-chapter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.next-chapter text {
+  font-size: 28rpx;
+  color: gray;
+  margin-right: 13rpx;
+}

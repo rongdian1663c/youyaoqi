@@ -1,33 +1,58 @@
-<view class='integrated-layout'>
-  <!-- 顶层大图 -->
-  <view class='top-image'>
-    <image src='{{comicObj.cover}}'></image>
+<!-- 顶层大图 -->
+<image class='top-image' src='{{comicObj.cover}}' />
+
+<!-- 中部整体布局 -->
+<view class='middle-layout'>
+  <!-- 透明部分 -->
+  <view class='lucency'>
+    <image src='{{comicList.ori}}' class='image-cover'></image>
+    <view class='text-layout'>
+      <view class='Cartoon-name'>
+        {{comicList.name}}
+      </view>
+      <view class='author-name'>
+        {{comicList.author.name}}
+      </view>
+      <view class='hot'>
+        热度值({{comicDetaiList.click_total}})
+      </view>
+      <!-- 漫画分类集合 -->
+      <view class='comic-classify'>
+        <view wx:for="{{comicList.classifyTags}}" wx:key='index'>
+          <text class='comic-classify-specific'>{{item.name}}</text>
+        </view>
+      </view>
+
+    </view>
   </view>
-
-  <view class='middle-layout'>
-    <view class='lucency'>
-      <image src='{{comicList.ori}}' class='image-cover'></image>
-      <view class='text-layout'>
-        <view class='Cartoon-name'>
-          {{comicList.name}}
+  <!-- 不透明部分 -->
+  <view class='opacity'>
+    <!-- 收藏试读 -->
+    <view class='collect'>
+      <image src='/image/icon_comic_detail_collect.png'></image>
+      <view class='collect-text'>收藏({{collect}}万)</view>
+      <view class='read'>免费试读</view>
+    </view>
+    <!-- 漫画内容描述 -->
+    <view class='description'>
+      <text>{{comicList.description}}</text>
+    </view>
+    <!-- 具体漫画目录 -->
+    <view wx:for="{{comicCatalog}}" wx:key='index' class='catalog' class='catalog-specific' wx:if="{{index <= 4}}">
+      <!-- 目录封面图片 -->
+      <image src='{{item.smallPlaceCover}}'></image>
+      <view class='dirname'>
+        <!-- 序号,章节名 -->
+        <text class='dirname-text'>{{item.name}}</text>
+        <!-- 下一张,更新时间 -->
+        <view class='next-chapter'>
+          <text>第{{}}话</text>
+          <text>{{item.publish_time}}</text>
         </view>
-        <view class='author-name'>
-          {{comicList.author.name}}
-        </view>
-        <view class='hot'>
-          热度值({{comicDetaiList.click_total}})
-        </view>
-
-        <view class='comic-classify'>
-          <view wx:for="{{comicList.classifyTags}}" wx:key='index'>
-            <text class='comic-classify-specific'>{{item.name}}</text>
-          </view>
-        </view>
-        
       </view>
     </view>
-    <view class='opacity'>
-
+    <view>
+      123
     </view>
   </view>
 </view>
