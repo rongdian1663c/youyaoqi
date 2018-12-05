@@ -49,9 +49,19 @@
         </view>
       </view>
     </view>
+    <!-- 展开目录 -->
     <view class='Open'>
       <image src='/image/icon_comic_detail_chapter_expand.png'></image>
       <text>展开目录</text>
+    </view>
+    <!-- 猜你喜欢 -->
+    <text class='like'>猜你喜欢</text>
+
+    <view class='like-layout'>
+      <view wx:for="{{comicLikeList}}"  wx:key='index' class='ud-layout'>
+        <image src='{{item.cover}}' class='like-image'></image>
+        <text class='like-text'>{{item.name}}</text>
+      </view>
     </view>
   </view>
 </view>

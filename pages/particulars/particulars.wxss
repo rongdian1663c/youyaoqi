@@ -2,11 +2,7 @@
   width: 100%;
   z-index: -2;
   filter: contrast(40%);
-<<<<<<< HEAD
-  
-=======
   position: fixed;
->>>>>>> master
 }
 
 .opacity {
@@ -18,7 +14,7 @@
   height: 100%;
 }
 
-.view-border{
+.view-border {
   position: absolute;
   height: 100rpx;
   width: 100%;
@@ -33,9 +29,8 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 150rpx;
+  top: 100rpx;
   width: 100%;
-  
 }
 
 .lucency {
@@ -50,7 +45,6 @@
   margin-left: 3%;
   display: flex;
   width: 100%;
-  
 }
 
 .Cartoon-name {
@@ -83,7 +77,6 @@
   flex-direction: row;
   margin-top: 70rpx;
   width: 100%;
-  
 }
 
 .comic-classify-specific {
@@ -94,14 +87,6 @@
   border-radius: 30rpx;
   padding: 3.5rpx 15rpx;
 }
-
-/* .view-border {
-  background: red;
-  height: 100rpx;
-  width: 100%;
-  border-top-left-radius: 30rpx;
-  border-top-right-radius: 30rpx;
-} */
 
 .collect {
   display: flex;
@@ -130,10 +115,10 @@
   color: white;
   font-size: 30rpx;
   background-color: #20db84c5;
-  border-top-left-radius:50rpx;
-  border-bottom-left-radius:50rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
   padding: 12rpx 110rpx 0 120rpx;
-  margin: auto 0 ;
+  margin: auto 0;
 }
 
 .description {
@@ -151,7 +136,7 @@
 .catalog-specific image {
   margin: 10rpx 20rpx 10rpx 30rpx;
   height: 150rpx;
-  width:  33%;
+  width: 33%;
   border-radius: 10rpx;
 }
 
@@ -160,12 +145,12 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  margin : 40rpx 0rpx 0rpx 30rpx;
+  margin: 40rpx 0rpx 0rpx 30rpx;
 }
 
 .dirname-text {
   font-size: 32rpx;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .next-chapter {
@@ -198,8 +183,39 @@
 
 .Open text {
   margin-left: 1%;
-   margin-top: 2.2%;
+  margin-top: 2.2%;
   font-size: 35rpx;
   color: rgb(27, 202, 71);
-  font-weight:580;
+  font-weight: 580;
+}
+
+.like-layout {
+  border: 5rpx solid rgb(255, 199, 14);
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.like {
+  font-weight: 700;
+  margin-top: 30rpx;
+}
+
+.ud-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.like-image {
+  height: 310rpx;
+  width: 230rpx;
+  border-radius: 10rpx;
+  margin: 8rpx;
+}
+
+.like-text {
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  margin-left: 8rpx;
 }

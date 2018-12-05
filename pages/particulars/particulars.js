@@ -7,7 +7,8 @@ Page({
     comicList: [],
     comicDetaiList: null,
     collect: null,
-    comicCatalog: []
+    comicCatalog: [],
+    comicLikeList:[]
   },
 
   fiexdAmound: function(num) {
@@ -44,7 +45,14 @@ Page({
             comicDetaiList: res.comic,
             collect: num.toFixed(2)
           })
-      })
+      }),
+      api.getComicLikeList(this.data.comicObj.comicId)
+        .then((res) => {
+          this.setData({
+            comicLikeList: res.comics,
+            
+          })
+        })
 
   },
 

@@ -11,8 +11,11 @@ export default {
   getComicList: (comicid) => http.get({
     "url": '/v3/appV3_3/ios/phone/comic/detail_static_new?version=4.3.12&comicid=' + comicid
     
-  }),
+  }), 
   getComicDetailsList: (comicid) => http.get({
     "url": '/v3/appV3_3/ios/phone/comic/detail_realtime?version=4.3.12&comicid=' + comicid
+  }),
+  getComicLikeList: (comicid) => http.get({
+    "url": '/v3/appV3_3/ios/phone/comic/guessLike?version=4.3.12comicid=' + comicid
   }),
 }
