@@ -1,15 +1,32 @@
 .top-image {
   width: 100%;
+  z-index: -2;
   filter: contrast(40%);
+<<<<<<< HEAD
   
+=======
+  position: fixed;
+>>>>>>> master
 }
 
 .opacity {
   display: flex;
+  background: white;
   flex-direction: column;
   border-radius: 10rpx;
   border: 5rpx solid red;
   height: 100%;
+}
+
+.view-border{
+  position: absolute;
+  height: 100rpx;
+  width: 100%;
+  z-index: -1;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background: white;
+  bottom: 0rpx;
 }
 
 .middle-layout {
@@ -23,6 +40,7 @@
 
 .lucency {
   width: 100%;
+  position: relative;
   display: flex;
   border: 5rpx solid black;
 }
@@ -63,7 +81,7 @@
 .comic-classify {
   display: flex;
   flex-direction: row;
-  margin-top: 50rpx;
+  margin-top: 70rpx;
   width: 100%;
   
 }

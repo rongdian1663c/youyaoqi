@@ -18,12 +18,10 @@
       </view>
       <!-- 漫画分类集合 -->
       <view class='comic-classify'>
-        <view wx:for="{{comicList.classifyTags}}" wx:key='index'>
-          <text class='comic-classify-specific'>{{item.name}}</text>
-        </view>
+        <text wx:for="{{comicList.classifyTags}}" wx:key='index' class='comic-classify-specific'>{{item.name}}</text>
       </view>
-
     </view>
+    <view class='view-border'></view>
   </view>
   <!-- 不透明部分 -->
   <view class='opacity'>
