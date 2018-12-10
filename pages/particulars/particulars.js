@@ -1,5 +1,5 @@
 import api from "../../http/api.js"
-
+import util from "../../utils/util.js"
 
 Page({
   data: {
@@ -8,7 +8,9 @@ Page({
     comicDetaiList: null,
     collect: null,
     comicCatalog: [],
-    comicLikeList:[]
+    comicLikeList:[],
+    formatTime:[]
+    
   },
 
   fiexdAmound: function(num) {
@@ -24,20 +26,31 @@ Page({
       }
     }
   },
-
+ 
   onLoad: function(options) {
     this.setData({
       comicObj: JSON.parse(options.comic)
 
     })
-
+    
+    
     api.getComicList(this.data.comicObj.comicId)
       .then((res) => {
+        var util = require("../../utils/util.js");
+        var arr = res.chapter_list;
+        
+        for (var i = 0; i < arr.length; i++) {
+          res.chapter_list[i].publish_time = util.js_date_time(arr[i].publish_time)
+        }
+      
         this.setData({
           comicList: res.comic,
           comicCatalog: res.chapter_list,
+          
+
         })
       }),
+  
       api.getComicDetailsList(this.data.comicObj.comicId)
       .then((res) => {
         var num = (res.comic.favorite_total) / 10000;
@@ -48,9 +61,10 @@ Page({
       }),
       api.getComicLikeList(this.data.comicObj.comicId)
         .then((res) => {
+        
           this.setData({
             comicLikeList: res.comics,
-            
+
           })
         })
 

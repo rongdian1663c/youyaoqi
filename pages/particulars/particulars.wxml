@@ -44,7 +44,7 @@
         <text class='dirname-text'>{{item.name}}</text>
         <!-- 下一张,更新时间 -->
         <view class='next-chapter'>
-          <text>第{{}}话</text>
+          <text>第{{index+1}}话</text>
           <text>{{item.publish_time}}</text>
         </view>
       </view>

@@ -30,6 +30,7 @@
   position: absolute;
   top: 100rpx;
   width: 100%;
+  margin-bottom: 50rpx;
 }
 
 .lucency {
@@ -212,3 +213,5 @@
   font-size: 32rpx;
   margin-left: 8rpx;
 }
+
+
